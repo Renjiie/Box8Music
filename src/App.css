@@ -8,11 +8,12 @@
 }
 
 .App-header {
-  
+  justify-content: center;
   height: 80px;
   padding: 20px;
   color: white;
-  margin: 20px;
+  margin-bottom: 40px;
+  position: relative;
 }
 
 @keyframes App-logo-spin {

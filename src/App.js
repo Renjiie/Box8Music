@@ -7,6 +7,7 @@ import Scroll from './components/Scroll/Scroll';
 import 'tachyons';
 import emoji from 'emoji-dictionary';
 import axios from 'axios';
+
 class App extends Component {
       state = {
         show:false,
@@ -40,12 +41,11 @@ onSearchChange=(event)=>{
 return (
 
       <div className="App">
-
-      
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <h1 className='f3 green'>Here are the TOP 100 ALBUMS of all Time....Keep Rocking!!</h1>
         </header>
-        <SearchBox searchChange= {this.onSearchChange}/>
+        <SearchBox className='f3' searchChange= {this.onSearchChange}/>
         <Scroll >
         <Albums songs={filteredSongs}/>
         </Scroll>
