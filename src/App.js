@@ -5,9 +5,11 @@ import SearchBox from './components/SearchBox/SearchBox';
 import Albums from './components/Albums/Albums';
 import Scroll from './components/Scroll/Scroll';
 import 'tachyons';
+import emoji from 'emoji-dictionary';
 import axios from 'axios';
 class App extends Component {
       state = {
+        show:false,
         songs : [],
       searchField: '',
       };
@@ -20,7 +22,9 @@ class App extends Component {
          });
     }
 
-
+itunesPageLoader=()=>{
+  this.setState({show:false})
+}
 
 onSearchChange=(event)=>{
     this.setState({searchField : event.target.value})
@@ -45,6 +49,12 @@ return (
         <Scroll >
         <Albums songs={filteredSongs}/>
         </Scroll>
+        <footer className="pv4 ph3 ph5-m ph6-l red">
+            <small className="f6 db tc">© 2018 <b className="ttu">Box8 Inc</b>., All Rights Reserved</small>
+            <div className="tc mt3">
+               {`Made with  ${emoji.getUnicode("purple_heart")} by Renjith`}
+            </div>
+        </footer>
 
         
       </div>
