@@ -42,9 +42,9 @@ return (
 
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className='f3 green'>Here are the TOP 100 ALBUMS of all Time....Keep Rocking!!</h1>
-        </header>
+          <img src={logo} className="App-logo" alt="logo" /></header>
+          <h1 className="shake-opacity shake-freeze">Here are the TOP 100 ALBUMS of all Time....Keep Rocking!!</h1>
+        
         <SearchBox className='f3' searchChange= {this.onSearchChange}/>
         <Scroll >
         <Albums songs={filteredSongs}/>

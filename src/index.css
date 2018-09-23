@@ -1,6 +1,29 @@
-body {
+/*body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background: linear-gradient(to left,rgba(7,27,82,1) 0%, rgba(0,128,128,1) 80%);  
+}*/
+body {
+  color: hsl(324, 70%, 45%);
+  animation: wheelHueColor 15s infinite;
+  background-color: currentColor;
+}
+@keyframes wheelHueColor {
+  from, to { color: hsl(324, 70%, 45%); }
+  10%      { color: hsl(360, 65%, 45%); }
+  20%      { color: hsl( 36, 80%, 45%); }
+  30%      { color: hsl( 72, 75%, 35%); }
+  40%      { color: hsl(108, 65%, 35%); }
+  50%      { color: hsl(144, 75%, 35%); }
+  60%      { color: hsl(180, 75%, 35%); }
+  70%      { color: hsl(216, 60%, 45%); }
+  80%      { color: hsl(252, 65%, 50%); }
+  90%      { color: hsl(288, 60%, 40%); }
+}
+@supports (background-blend-mode: overlay) {
+    body {
+        background-image: linear-gradient(45deg, white 10%, black 90%);
+        background-blend-mode: overlay;
+    }
 }
