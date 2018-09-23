@@ -1,12 +1,12 @@
 import React from 'react';
 import SongCards from '../SongCards/SongCards';
-
+import './Albums.css';
 
 const albums = (props) => {
 		const songsList = props.songs.map(entries => {
         return (
 
-        <SongCards 
+        <SongCards  
 
           key={entries.id.label} 
           artist={entries["im:artist"].label}
@@ -18,8 +18,8 @@ const albums = (props) => {
         />
       );
     });
-		return(
-			songsList
+		return(<div className='pa3 ma2 SongCards'>
+			{songsList}</div>
 			);
 		
 }

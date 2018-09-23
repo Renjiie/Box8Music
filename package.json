@@ -2,6 +2,7 @@
   "name": "box8",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://renjiie.github.io/Box8Music",
   "dependencies": {
     "axios": "^0.18.0",
     "emoji-dictionary": "^1.0.9",
@@ -16,6 +17,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+}
 }
